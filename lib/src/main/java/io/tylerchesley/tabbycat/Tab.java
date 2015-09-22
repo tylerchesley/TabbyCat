@@ -14,4 +14,24 @@
  * limitations under the License.
  */
 
-include ':samples', ':lib', ':preconditioner'
+package io.tylerchesley.tabbycat;
+
+import android.support.annotation.DrawableRes;
+import android.support.annotation.LayoutRes;
+import android.support.annotation.StringRes;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+@Retention(RetentionPolicy.RUNTIME)
+public @interface Tab {
+
+    @StringRes int value() default -1;
+
+    @StringRes int title() default -1;
+
+    @DrawableRes int icon() default -1;
+
+    @LayoutRes int layout() default -1;
+
+}

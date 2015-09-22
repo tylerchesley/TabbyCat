@@ -21,7 +21,7 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        applicationId 'io.tylerchesley.tabbycat'
+        applicationId 'io.tylerchesley.tabbycat.samples'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode rootProject.ext.versionCode
@@ -40,4 +40,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile rootProject.ext.supportDependencies.appCompat
     compile rootProject.ext.supportDependencies.design
+    compile project(':lib')
 }

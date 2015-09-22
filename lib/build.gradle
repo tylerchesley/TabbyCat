@@ -42,4 +42,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile rootProject.ext.supportDependencies.appCompat
     compile rootProject.ext.supportDependencies.design
+    compile rootProject.ext.supportDependencies.supportAnnotation
+    compile project(':preconditioner')
 }

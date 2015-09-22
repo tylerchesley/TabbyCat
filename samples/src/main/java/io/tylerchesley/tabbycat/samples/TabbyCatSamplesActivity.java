@@ -14,16 +14,20 @@
  * limitations under the License.
  */
 
-package io.tylerchesley.tabbycat;
+package io.tylerchesley.tabbycat.samples;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
+import io.tylerchesley.tabbycat.TabbyCatPagerAdapter;
 
 public class TabbyCatSamplesActivity extends AppCompatActivity {
 
@@ -31,8 +35,17 @@ public class TabbyCatSamplesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabby_cat_samples);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        final TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        final ViewPager pager = (ViewPager) findViewById(R.id.pager);
         setSupportActionBar(toolbar);
+
+        TabbyCatPagerAdapter
+                .build(pager, tabLayout)
+                .add(TabbyCatFragment1.class)
+                .add(TabbyCatFragment2.class)
+                .add(TabbyCatFragment3.class)
+                .build();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

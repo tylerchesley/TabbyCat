@@ -14,11 +14,13 @@
   ~ limitations under the License.
   -->
 
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="io.tylerchesley.tabbycat">
+<manifest
+    package="io.tylerchesley.tabbycat"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
 
-    <application android:allowBackup="true"
-                 android:label="@string/app_name"
+    <application
+        android:allowBackup="true"
         >
 
     </application>

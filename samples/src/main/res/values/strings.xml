@@ -17,4 +17,7 @@
 <resources>
     <string name="app_name">TabbyCat</string>
     <string name="action_settings">Settings</string>
+    <string name="title_fragment_1">Fragment 1</string>
+    <string name="title_fragment_2">Fragment 2</string>
+    <string name="title_fragment_3">Fragment 3</string>
 </resources>

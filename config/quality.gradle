@@ -16,6 +16,11 @@
 
 apply plugin: 'checkstyle'
 
+checkstyle {
+    // Adds the ability to exclude visibility checks on members with specific annotations
+    toolVersion = "6.7"
+}
+
 check.dependsOn 'checkstyle', 'lint'
 
 task checkstyle(type: Checkstyle) {

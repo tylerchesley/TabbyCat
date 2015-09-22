@@ -14,4 +14,10 @@
  * limitations under the License.
  */
 
-include ':samples', ':lib', ':preconditioner'
+package io.tylerchesley.tabbycat.samples;
+
+import io.tylerchesley.tabbycat.Tab;
+
+@Tab(R.string.title_fragment_1)
+public class TabbyCatFragment1 extends TabbyCatFragment {
+}
